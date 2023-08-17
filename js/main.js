@@ -22,11 +22,10 @@ function remove_empty_bins(source_group) {
 	    };
 	};
 
-queue()
-    .defer(d3.json, "https://raw.githubusercontent.com/petehilljnr/aggregates/main/data/aggregates.json.gz")
-    .await(makeCharts);
+fetch("https://raw.githubusercontent.com/petehilljnr/aggregates/main/data/aggregates.json.gz")
+	.then(x => makeCharts(x))
 
-function makeCharts(error, data) {
+function makeCharts(data) {
 
 	data.forEach(function(d) {
 		d.age = +d.age;
