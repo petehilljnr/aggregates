@@ -22,8 +22,12 @@ function remove_empty_bins(source_group) {
 	    };
 	};
 
-fetch("https://raw.githubusercontent.com/petehilljnr/aggregates/main/data/aggregates.json.gz")
-	.then(x => makeCharts(x))
+async function startup() {
+	const response = await fetch("https://raw.githubusercontent.com/petehilljnr/aggregates/main/data/aggregates.json.gz")
+	return response.json()
+}
+
+startup().then((x) => {makeCharts(x)})
 
 function makeCharts(data) {
 	console.log(data);
