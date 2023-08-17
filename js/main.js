@@ -44,6 +44,7 @@ function makeCharts(error, data) {
 		d.hierarchy = luHierarchy[d.hierarchy] || 'unknown';
 		d.traffic = luTraffic[d.traffic] || 'unknown';
 		d.heavy = luHeavies[d.heavy] || 'unknown';
+		d.map_id = +d.map_id;
 	});
 
 	var fillColour = '#0099cc'
