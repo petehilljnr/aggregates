@@ -22,16 +22,11 @@ function remove_empty_bins(source_group) {
 	    };
 	};
 
-async function startup() {
-	const response = await fetch("https://raw.githubusercontent.com/petehilljnr/aggregates/main/data/aggregates.json")
-	const data = response.json();
-	console.log(data);
-	return data;
-}
+queue()
+    .defer(d3.csv, "https://raw.githubusercontent.com/petehilljnr/aggregates/main/data/aggregates.csv")
+    .await(makeCharts);
 
-startup().then((x) => {makeCharts(x)})
-
-function makeCharts(data) {
+function makeCharts(error, data) {
 	console.log(data);
 	data.forEach(function(d) {
 		d.age = +d.age;
