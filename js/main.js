@@ -23,7 +23,7 @@ function remove_empty_bins(source_group) {
 	};
 
 async function startup() {
-	const response = await fetch("https://raw.githubusercontent.com/petehilljnr/aggregates/main/data/aggregates.json.gz")
+	const response = await fetch("https://raw.githubusercontent.com/petehilljnr/aggregates/main/data/aggregates.json")
 	return response.json()
 }
 
