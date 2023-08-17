@@ -26,7 +26,7 @@ fetch("https://raw.githubusercontent.com/petehilljnr/aggregates/main/data/aggreg
 	.then(x => makeCharts(x))
 
 function makeCharts(data) {
-
+	console.log(data);
 	data.forEach(function(d) {
 		d.age = +d.age;
 		d.scrim = +d.scrim;
