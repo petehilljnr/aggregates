@@ -27,7 +27,6 @@ queue()
     .await(makeCharts);
 
 function makeCharts(error, data) {
-	console.log(data);
 	data.forEach(function(d) {
 		d.age = +d.age;
 		d.scrim = +d.scrim;
