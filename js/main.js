@@ -23,7 +23,7 @@ function remove_empty_bins(source_group) {
 	};
 
 queue()
-    .defer(d3.json, "https://www.geelong.stantec.online/v1/query/aggregates?schema=nzta&?columns=traffic%2Cheavy%2Cgradient%2Ccurvature%2Csource%2Cmaterial%2Ccontract%2Cskid_site%2Cscrim%2Cage%2Chierarchy%2Curban_rural%2Cfunction%2Csurf_category%2Cpsv%2Cmpd%2Clength_m%2Cmap_id")
+    .defer(d3.json, "https://raw.githubusercontent.com/petehilljnr/aggregates/main/data/aggregates.json.gz")
     .await(makeCharts);
 
 function makeCharts(error, data) {
