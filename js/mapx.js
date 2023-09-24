@@ -1,6 +1,6 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoicGV0ZWhpbGxqbnIiLCJhIjoiY2swcjZtd3IxMDJjOTNjb3c1Z25wczQ3NyJ9.2Ut4kmGeVuvc7UUb-qezNw';
 
-var URL_BASE = "https://www.geelong.stantec.online/v1/mvt/nzta.aggregates/{z}/{x}/{y}?geom_column=geom&columns=map_id%2Cscrim";
+var URL_BASE = "https://aggregates-tool.stantec.online/v1/mvt/nzta.aggregates/{z}/{x}/{y}?geom_column=geom&columns=map_id%2Cscrim";
 var layerName = 'nzta.aggregates';
 var sourceName = 'pg_agg';
 
